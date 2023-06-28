@@ -88,74 +88,35 @@ ion-icon:hover {
    cursor: pointer;
 }
 
-.img-slider img {
-   height: 720px;
-   width: 1080px;
-}
-
-@keyframes slide {
-   0% {
-      left: 0px;
-   }
-   15% {
-      left: 0px;
-   }
-   20% {
-      left: -1080px;
-   }
-   32% {
-      left: -1080px;
-   }
-   35% {
-      left: -2160px;
-   }
-   47% {
-      left: -2160px;
-   }
-   50% {
-      left: -3240px;
-   }
-   63% {
-      left: -3240px;
-   }
-   66% {
-      left: -4320px;
-   }
-   79% {
-      left: -4320px;
-   }
-   82% {
-      left: -5400px;
-   }
-   100% {
-      left: 0px;
-   }
-}
-
-.img-slider {
-   display: flex;
-   float: left;
-   position: relative;
-   width: 1080px;
-   height: 720px;
-   animation-name: slide;
-   animation-duration: 10s;
-   animation-iteration-count: infinite;
-   transition-duration: 2s;
-}
-
 .search {
    display: flex;
    position: relative;
 }
 
-.section1 {
-   width: 1080px;
+.carousel {
+   width: 100%;
    overflow: hidden;
-   justify-content: center;
-   align-items: center;
-   margin: 0px auto;
-}
+ }
+ 
+ .carousel-container {
+   display: flex;
+   transition: transform 0.5s ease;
+ }
+ 
+ .carousel img {
+   width: 30%;
+ }
+ 
+ .carousel-controls {
+   margin-top: 10px;
+   text-align: center;
+ }
+ 
+ .carousel-controls button {
+   font-size: 18px;
+   padding: 5px 10px;
+ }
+ 
 
 .section2 .container {
    display: flex;
@@ -316,18 +277,6 @@ footer {
    margin: 10px;
 }
 
-.img-slider {
-   display: flex;
-   float: left;
-   position: relative;
-   width: 80%;
-   height: 60%;
-   animation-name: slide1;
-   animation-duration: 10s;
-   animation-iteration-count: infinite;
-   transition-duration: 2s;
-}
-
 .section1 {
    width: 80%;
    overflow: hidden;
@@ -368,6 +317,11 @@ footer {
    .active {
      display: flex;
    }
+
+   .carousel img {
+      width: 50%;
+      opacity: 0.97;
+    }
  }
  
  /* Medium devices (landscape tablets) */
@@ -378,6 +332,11 @@ footer {
    .nav-links a {
       font-size: 18x; /* Adjust the font size as desired */
       margin: 8px;
+    }
+
+    .carousel img {
+      width: 50%;
+      opacity: 0.95;
     }
  }
  
